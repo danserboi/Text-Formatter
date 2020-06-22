@@ -1,0 +1,65 @@
+Nume: Serboi D. Florea-Dan
+
+Grupa si seria: 315CB
+
+In cod sunt folosite functii pentru o urmarire mai usoara si pentru a evita
+repetarea anumitor instructiuni, fiecare functie fiind responsabila de
+rezolvarea unei anumite portiuni din cod.
+
+In prima functie, elim_trailing, se elimina spatiile de la sfarsitul fiecarei
+linii.
+
+In cea de-a doua functie, lung_max_cuv, este determinat cuvantul cu lungimea
+maxima si este returnata aceasta valoare.
+
+In cea de-a treia functie, lung_max_linie, este determinata linia cu lungimea
+maxima si este returnata valoarea sa.
+
+In cea de-a patra functie, center, este centrata fiecare linie avand ca
+referinta linia cea mai mare. Pentru fiecare linie, se face un sir auxiliar cu
+spatii cu lungimea jumatate, respectiv jumatate + 1 - dupa paritate - din
+diferenta lungimilor dintre cea mai lunga linie si linia curenta.
+
+In cea de-a cincea functie, align_right, se aliniaza liniile la dreapta.
+
+In cea de-a sasea functie, align_left, se aliniaza liniile la stanga.
+
+In cea de-a saptea functie, justify, liniile sunt modificate astfel incat sa
+fie aliniate atat la stanga, cat si la dreapta. Se parcurge fiecare linie de
+mai multe ori, pana cand se atinge lungimea maxima, adaugandu-se cate un spatiu
+la fiecare grup de spatii intalnit.
+
+In cea de-a opta functie, wrap, liniile se vor modifica astfel incat lungimea
+lor sa se incadreze in lungimea maxima dorita, si fiind pe cat de mari posibil.
+Aici, vom construi un sir de caractere cu continutul tuturor liniilor, punand
+spatiu in loc de '\n', exceptand situatiile cand avem rand liber (urmeaza
+paragraf). Apoi, vom inlocui convenabil in sirul obtinut spatii cu '\n'. Se
+incearca obtinerea unei linii cu lungimea maxima, parcurgandu-se descrescator,
+de la posibilul capat final pana la cel initial, pana la intalnirea unui spatiu
+delimitator. Acel spatiu va fi inlocuit cu '\n' si se va forma astfel o noua
+linie. Se observa ca mai intai parcurgem de la capatul initial pana la cel
+final, pentru a cauta \n in sir, deoarece nu putem ignora paragrafele deja
+prezente, astfel '\n' are "prioritate" in fata spatiilor.
+
+In cea de-a noua functie, paragraf, se indenteaza fiecare paragraf cu lungimea
+dorita. Pentru fiecare linie de inceput de paragraf, se formeaza un sir
+auxiliar format doar din spatii cu lungimea dorita de indentare la care se
+concateneaza linia curenta.
+
+In cea de-a zecea functie si in cea de-a 12-a functie, lista, respectiv,
+lista_ordonata, sunt formatate liniile ca pe niste liste (aliniate la stanga)
+fiind de mai multe tipuri: numerice, alfabetice, sau bullet, cu deosebirea ca
+la cea din urma se face ordonarea elementelor alfabetic crescator sau
+descrescator. Se foloseste functia sprintf a formata fiecare linie.
+
+In cea de-a 11-a functie, ordonare, se face ordonarea alfabetica crescatoare
+sau descrescatoare a liniilor.
+
+In cea de-a 13-a functie, extragere_par, sunt extrasi parametri din cadrul unei
+operatii, care vor fi retinuti intr-un vector dat ca parametru.
+
+In programul principal, se face citirea din fisier si sunt tratate anumite
+erori de citire. Sunt extrase apoi operatiile din comanda, dupa care este
+abordata fiecare operatie in parte, apelandu-se functia corespunzatoare si
+tratandu-se eventualele erori. La final se scrie intr-un fisier de output
+rezultatul obtinut.
